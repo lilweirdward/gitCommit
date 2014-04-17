@@ -3,6 +3,7 @@
 </head>
 
 <body>
+	{{> loginButtons}}<br>
 	<h1>gitCommit.me</h1>
 	{{> stuff}}
 	<span class="messageBox">
@@ -19,7 +20,7 @@
 
 <template name="messages">
 	{{#each messages}}
-		{{time}}-<strong>{{name}}:</strong> {{message}}</br>
+		<strong>{{name}}:</strong> {{message}}<br>
 	{{/each}}
 </template>
 
