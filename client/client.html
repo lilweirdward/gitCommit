@@ -1,0 +1,23 @@
+<head>
+	<title>gitCommit.me</title>	
+</head>
+
+<body>
+	<h1>gitCommit.me</h1>
+	{{> stuff}}
+	<span class="messageSpan">
+		{{> messages}}
+	</span>
+</body>
+
+<template name="stuff">
+	<p>
+		Stuff goes in here
+	</p>
+</template>
+
+<template name="messages">
+	{{#each messages}}
+		{{time}}-<strong>{{name}}:</strong> {{message}}</br>
+	{{/each}}
+</template>
