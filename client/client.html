@@ -5,8 +5,9 @@
 <body>
 	<h1>gitCommit.me</h1>
 	{{> stuff}}
-	<span class="messageSpan">
+	<span class="messageBox">
 		{{> messages}}
+		{{> input}}
 	</span>
 </body>
 
@@ -20,4 +21,8 @@
 	{{#each messages}}
 		{{time}}-<strong>{{name}}:</strong> {{message}}</br>
 	{{/each}}
+</template>
+
+<template name="input">
+	<p>Chat: <input type="text" id="message"></p>
 </template>
