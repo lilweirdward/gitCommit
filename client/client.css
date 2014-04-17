@@ -1,0 +1,21 @@
+.messageBox {
+	width: 25%;
+	float:right;
+	border-style: groove;
+	border-bottom-color: #152842;
+	border-top-color: #2d3e8e;
+	border-width: 5px;
+}
+
+.login-buttons-dropdown-align-right {
+    float: right;
+}
+
+.loginButtons {
+	float:right;
+}
+
+.mainContent {	
+	width: 50%;
+	margin: 0 auto;
+}

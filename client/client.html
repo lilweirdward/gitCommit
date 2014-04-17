@@ -3,13 +3,20 @@
 </head>
 
 <body>
-	{{> loginButtons}}<br>
-	<h1>gitCommit.me</h1>
-	{{> stuff}}
-	<span class="messageBox">
+	<div class="loginButtons">
+		{{> loginButtons}}<br>
+	</div>
+
+	<div class="mainContent">
+		<h1>gitCommit.me</h1>
+		{{> stuff}}
+	</div>
+
+	<div class="messageBox">
 		{{> messages}}
 		{{> input}}
-	</span>
+	</div>
+	
 </body>
 
 <template name="stuff">
