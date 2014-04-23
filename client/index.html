@@ -10,9 +10,18 @@
 	
 	{{#if currentUser}}
 	
+		{{ > mainNavigation}}
+	
+		{{> loggedInIntro}}
+		
+			{{> messages}}
+			{{> input}}
+		
+		{{> footer}}
+	
 	{{else}}
 	
-    	{{ > navigation}}
+    	{{ > mainNavigation}}
 	
 		{{> mainIntro}}
 	
