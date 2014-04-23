@@ -8,36 +8,7 @@
 </head>
 <body>
 	
-	{{#if currentUser}}
-	
-		{{ > mainNavigation}}
-	
-		{{> loggedInIntro}}
-		
-		{{> userList}}
-		
-			{{> messages}}
-			{{> input}}
-		
-		{{> footer}}
-	
-	{{else}}
-	
-    	{{ > mainNavigation}}
-	
-		{{> mainIntro}}
-	
-    	{{> whoWeAre}}
-	
-    	{{> testimony}}
-	
-    	{{> signUp}}
-	
-		{{> contactUs}}
-    
-		{{> footer}}
-		
-	{{/if}}
+	{{> masterTemplate}}
 
     <script type="text/javascript">
         $('.sandwichbar').click(function() {

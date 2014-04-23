@@ -1,0 +1,32 @@
+<template name="masterTemplate">
+	{{#if currentUser}}
+	
+		{{ > mainNavigation}}
+	
+		{{> loggedInIntro}}
+		
+		{{> userList}}
+		
+			{{> messages}}
+			{{> input}}
+		
+		{{> footer}}
+	
+	{{else}}
+	
+    	{{ > mainNavigation}}
+	
+		{{> mainIntro}}
+	
+    	{{> whoWeAre}}
+	
+    	{{> testimony}}
+	
+    	{{> signUp}}
+	
+		{{> contactUs}}
+    
+		{{> footer}}
+		
+	{{/if}}
+</template>
