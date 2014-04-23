@@ -17,3 +17,14 @@ Meteor.publish('allMessages',function() {
 Meteor.publish('allUsers', function() {
 	return Meteor.users.find();
 })
+
+Meteor.publish('currentUser', function() {
+	
+	if(this.userId) {
+		
+		var user = Meteor.users.find(this.userId);
+		
+		return user;
+	}
+	
+})

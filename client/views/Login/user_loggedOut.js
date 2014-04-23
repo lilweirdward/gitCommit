@@ -10,9 +10,13 @@ Template.user_loggedOut.events({
 				else {
 					console.log("Connection to GitHub successfull");
 				}
+		
+					Session.set("loggedInUser_uID", this.profile.uID);
 					
 		});
 	}
+
+	
 });
 
 
