@@ -149,7 +149,7 @@ a.logo img {
 .chat {
   width: 22rem;
   height: 100%;
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
   left: auto;
@@ -163,10 +163,18 @@ a.logo img {
 
 /* line 161, ../compass/sass/backend.scss */
 .chat.open {
-  left: 100%;
+  width: 0;
+}
+/* line 163, ../compass/sass/backend.scss */
+.chat.open .messagebox {
+  display: none;
+}
+/* line 166, ../compass/sass/backend.scss */
+.chat.open .messages {
+  display: none;
 }
 
-/* line 165, ../compass/sass/backend.scss */
+/* line 171, ../compass/sass/backend.scss */
 .tab {
   height: 3rem;
   width: 3rem;
@@ -183,7 +191,7 @@ a.logo img {
   border-right: none;
 }
 
-/* line 181, ../compass/sass/backend.scss */
+/* line 187, ../compass/sass/backend.scss */
 .messages {
   /*border: 1px solid white;*/
   color: white;
@@ -197,14 +205,14 @@ a.logo img {
   overflow-y: auto;
 }
 
-/* line 194, ../compass/sass/backend.scss */
+/* line 200, ../compass/sass/backend.scss */
 .message {
   border-top: 1px solid white;
   padding: 1rem;
   margin: 0.5rem;
   clear: both;
 }
-/* line 199, ../compass/sass/backend.scss */
+/* line 205, ../compass/sass/backend.scss */
 .message img {
   width: 3rem;
   height: 3rem;
@@ -214,19 +222,19 @@ a.logo img {
   margin: 0.5rem;
   margin-left: 0;
 }
-/* line 208, ../compass/sass/backend.scss */
+/* line 214, ../compass/sass/backend.scss */
 .message h2 {
   display: block;
   font-size: 1.15rem;
   margin: 0.25rem;
 }
-/* line 213, ../compass/sass/backend.scss */
+/* line 219, ../compass/sass/backend.scss */
 .message p {
   display: inline;
   margin: 0.25rem;
 }
 
-/* line 219, ../compass/sass/backend.scss */
+/* line 225, ../compass/sass/backend.scss */
 .messagebox {
   border: 1px solid white;
   background-color: #c7c7c7;
@@ -240,12 +248,12 @@ a.logo img {
   text-align: right;
   color: black;
 }
-/* line 231, ../compass/sass/backend.scss */
+/* line 237, ../compass/sass/backend.scss */
 .messagebox .button {
   margin: 0.75rem;
   margin-bottom: 0;
 }
-/* line 235, ../compass/sass/backend.scss */
+/* line 241, ../compass/sass/backend.scss */
 .messagebox textarea {
   height: 10rem;
   display: block;
@@ -254,7 +262,7 @@ a.logo img {
   font-family: "Source Sans Pro", sans-serif;
 }
 
-/* line 244, ../compass/sass/backend.scss */
+/* line 250, ../compass/sass/backend.scss */
 .button {
   display: inline-block;
   padding: 0.75rem 1.875rem;
@@ -270,7 +278,7 @@ a.logo img {
   transition: all 0.5s;
 }
 
-/* line 257, ../compass/sass/backend.scss */
+/* line 263, ../compass/sass/backend.scss */
 .button:hover {
   -webkit-box-shadow: inset 0 0 0 3px #f04285;
   -moz-box-shadow: inset 0 0 0 3px #f04285;
