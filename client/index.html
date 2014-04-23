@@ -7,115 +7,27 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 </head>
 <body>
-    {{ > navigation}}
-	<div class="section header">
-    	<div class="container header special">
-        	<a href="#" style="width: 90%; display: inline-block;"><img src="images/GitCommitMe-LogoV1.png" class="logo" /></a>
-            <img class="sandwichbar" src="images/sandwich-bar.png" />
-        </div>
-    	<div class="container header">
-        	<h1 id="gitcommitme">gitCommitMe</h1>
-            <h2>Making Your Pull Requests Possible</h2>
-            <img src="images/down-chevron.png" class="downchevron" />
-        </div>
-    </div>
-    <div class="hiddenheader">
-        <div class="container">
-            <a href="#"><img class="logo" src="images/GitCommitMe-LogoV1.png" /></a>
-            <img class="sandwichbar" src="images/sandwich-bar.png" />
-        </div>
-    </div>
-    <div class="section content">
-        <img class="container right" src="images/placeholder.png" />
-        <div class="container left">
-            <h1>who are we, and why are we here?</h1>
-            <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Hac cohaero partim vorago, um atqui comperio. Primoris preda nauta pacis insperatus.
-            </p> 
-            <p>
-                Arx mos vere lepus, quamdiu septem bos contradictio id preproperus praesentia pro. Deludo despicio lac dolosus, fui audax aer calamitas stella. Crebro maero nolui eo Montensem ira. Ipse experior letor incredibilis illuc paene iaculum, mallui vir priores. Tergo ter decimus ob ordinatio per. Respicio consilio cohors vulpes, qualitas libero inscribo palma cohors.
-            </p>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="section testimony">
-        <div class="container">
-            <h1>what people say about us</h1>
-            <div id="row1" class="row special">
-                <div class="column size-3">
-                    <div id="scroll1" class="circle">
-                        <img class="fill" src="images/smiling-girl.jpg" />
-                    </div>
-                </div>
-                <div class="column size-9">
-                    <h2>"The Best Everrrrr"</h2>
-                    <p>
-                        OH. EM. GEE. Hot guys who also have C repos? Yes PLEASE! This is the best service I've ever used!
-                    </p>
-                </div>
-            </div>
-            <div id="row2" class="row special-left">
-                <div class="column size-9">
-                    <h2>"Not Just a Dating App"</h2>
-                    <p>
-                        I actually really enjoy using this app just to find other friends that are also web developers, especially since I can choose to talk to people that use the same languages as me, or write in completely foreign ones (the Erlang peeps are mad cray, tho).
-                    </p>
-                </div>
-                <div class="column size-3">
-                    <div id="scroll2" class="circle">
-                        <img class="fill" src="images/business-man.jpg" />
-                    </div>
-                </div>
-            </div>
-            <div id="row3" class="row special">
-                <div class="column size-3">
-                    <div id="scroll3" class="circle">
-                        <img class="fill" src="images/happy-man.jpg" />
-                    </div>
-                </div>
-                <div class="column size-9">
-                    <h2>"There Are Actually Women On Here"</h2>
-                    <p>
-                        I'm not lying guys. I have women fork my repo almost every day, and it's awesome! I've even merged with a few different people ;)
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="section signup">
-        <img class="container left" src="images/placeholder.png" />
-        <div class="container right">
-            <h1>how the hell do i sign up??</h1>
-            <p>
-                Arx mos vere lepus, quamdiu septem bos contradictio id preproperus praesentia pro. Deludo despicio lac dolosus, fui audax aer calamitas stella. Crebro maero nolui eo Montensem ira. Ipse experior letor incredibilis illuc paene iaculum, mallui vir priores. Tergo ter decimus ob ordinatio per. Respicio consilio cohors vulpes, qualitas libero inscribo palma cohors.
-            </p>
-            <a href="#" class="button">Sign Up</a>
-        </div>
-        <div class="clear"></div>
-    </div>
-    <div class="section contact">
-        <div class="container">
-            <h1>talk to us</h1>
-            <p>
-                Want to talk to someone who can personally match you up with your soulmate without you having to do any work? Well, unfortunately we haven't gotten that good yet. We would still love to hear from you though. We've even included a snazzy little contact form to make your life easier!
-            </p>
-            <form>
-                <input type="text" name="name" id="name" placeholder="Name">
-                <input type="email" name="email" id="email" placeholder="Email">
-                <input type="text" name="message" id="message" placeholder="Message">
-                <button type="submit" id="submit">Submit</button>
-            </form>
-        </div>
-    </div>
-    <div class="section footer">
-        <div class="container">
-            <p>
-                &copy;2014 <a href="mailto:adamfknecht@gmail.com">Adam</a>, <a href="mailto:albin.george@teknologio.org">Albin</a>, <a href="mailto:joseph.blackett@gmail.com">Joe</a>, and <a href="mailto:zachw38@gmail.com">Zach</a>
-            </p>
-            <!-- <hr> -->
-            <p>gitCommit Team</p>
-        </div>
-    </div>
+	
+	{{#if currentUser}}
+	
+	{{else}}
+	
+    	{{ > navigation}}
+	
+		{{> mainIntro}}
+	
+    	{{> whoWeAre}}
+	
+    	{{> testimony}}
+	
+    	{{> signUp}}
+	
+		{{> contactUs}}
+    
+		{{> footer}}
+		
+	{{/if}}
+
     <script type="text/javascript">
         $('.sandwichbar').click(function() {
             $('.navigation').addClass('on');
