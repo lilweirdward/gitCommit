@@ -1,0 +1,163 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>GitCommitMe</title>
+    <link href="assets/css/style.css" rel="stylesheet" type="text/css">
+	<link href='http://fonts.googleapis.com/css?family=Quicksand:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,900' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="navigation">
+        <div class="wrapper">
+            <a href="#">Home</a>
+            <a href="#">Testimonies</a>
+            <a href="#">Sign Up</a>
+            <a href="#">Contact Us</a>
+            <span class="x">X</span>
+        </div>
+    </div>
+	<div class="section header">
+    	<div class="container header special">
+        	<a href="#" style="width: 90%; display: inline-block;"><img src="assets/images/GitCommitMe-LogoV1.png" class="logo" /></a>
+            <img class="sandwichbar" src="assets/images/sandwich-bar.png" />
+        </div>
+    	<div class="container header">
+        	<h1 id="gitcommitme">gitCommitMe</h1>
+            <h2>Making Your Pull Requests Possible</h2>
+            <img src="assets/images/down-chevron.png" class="downchevron" />
+        </div>
+    </div>
+    <div class="hiddenheader">
+        <div class="container">
+            <a href="#"><img class="logo" src="assets/images/GitCommitMe-LogoLong.png" /></a>
+            <img class="sandwichbar" src="assets/images/sandwich-bar.png" />
+        </div>
+    </div>
+    <div class="section content">
+        <img class="container left" src="assets/images/placeholder.png" style="margin-top: 10rem;" />
+        <div class="container right" style="padding-top: 0; padding-bottom: 0;">
+            <h1>who are we, and why are we here?</h1>
+            <p>
+                We are gitCommitMe, and we provide an informal way of meeting and networking with other people in your technical field. To do this, you're given the ability to sift through (potentially semi-)random GitHub profiles, and fork the ones that you find interesting. If those people also fork your profile, your profiles will receive a merge request, which will allow you to chat with them, as well as anyone else that you've merged with. You can also earn badges for being a skilled-enough gitCommitter, such as <em>10 Merges In A Month</em>.
+            </p> 
+            <p>
+                The idea for gitCommitMe was inspired by our two primary passions: our love of GitHub, and our love of networking. While there are plenty of apps that allow you to communicate with other professionals, they either are too formal to allow real networking (ie. Stack Overflow), or they're too broad for just technical professionals (ie. LinkedIn). And although apps like IRC are still popular among the IT crowds (yes, that was definitely a subtle reference to an amazing show), there's no real way of knowing the true credibility of who you're speaking with. Our idea for gitCommitMe was that it would solve that gap - allowing you to informally communicate with people who have been vouched for by the power of GitHub.
+            </p>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section testimony">
+        <div class="container">
+            <h1>what people say about us</h1>
+            <div id="row1" class="row special">
+                <div class="column size-5">
+                    <div id="scroll1" class="circle">
+                        <img class="fill" src="assets/images/smiling-girl.jpg" />
+                    </div>
+                </div>
+                <div class="column size-7">
+                    <h2>"The Best Everrrrr"</h2>
+                    <p>
+                        OH. EM. GEE. Hot guys who also have C repos? Yes PLEASE! This is the best service I've ever used!
+                    </p>
+                </div>
+            </div>
+            <div id="row2" class="row special-left">
+                <div class="column size-7">
+                    <h2>"Not Just a Dating App"</h2>
+                    <p>
+                        I actually really enjoy using this app just to find other friends that are also web developers, especially since I can choose to talk to people that use the same languages as me, or write in completely foreign ones (the Erlang peeps are mad cray, tho).
+                    </p>
+                </div>
+                <div class="column size-5">
+                    <div id="scroll2" class="circle">
+                        <img class="fill" src="assets/images/business-man.jpg" />
+                    </div>
+                </div>
+            </div>
+            <div id="row3" class="row special">
+                <div class="column size-5">
+                    <div id="scroll3" class="circle">
+                        <img class="fill" src="assets/images/happy-man.jpg" />
+                    </div>
+                </div>
+                <div class="column size-7">
+                    <h2>"There Are Actually Women On Here"</h2>
+                    <p>
+                        I'm not lying guys. I have women fork my repo almost every day, and it's awesome! I've even merged with a few different people ;)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="section signup">
+        <img class="container right" src="assets/images/placeholder.png" />
+        <div class="container left">
+            <h1>how the hell do i sign up??</h1>
+            <p>
+                We've made the process as easy as possible. All you have to do is log in with your GitHub account, using the button below to access our login page (if you don't have a GitHub account, it'll take no time at all to set one up). That's it. We won't need any credit card info, nor will we store any of your personal information other than what GitHub has publicly available.
+            </p>
+            <a href="#" class="button">Sign Up</a>
+        </div>
+        <div class="clear"></div>
+    </div>
+    <div class="section contact">
+        <div class="container">
+            <h1>talk to us</h1>
+            <p>
+                Want to talk to someone who can personally match you up with your soulmate without you having to do any work? Well, unfortunately we haven't gotten that good yet. We would still love to hear from you though. We've even included a snazzy little contact form to make your life easier!
+            </p>
+            <form>
+                <input type="text" name="name" id="name" placeholder="Name">
+                <input type="email" name="email" id="email" placeholder="Email">
+                <input type="text" name="message" id="message" placeholder="Message">
+                <button type="submit" id="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div class="section footer">
+        <div class="container">
+            <p>
+                &copy;2014 <a href="mailto:adamfknecht@gmail.com">Adam</a>, <a href="mailto:albin.george@teknologio.org">Albin</a>, <a href="mailto:joseph.blackett@gmail.com">Joe</a>, and <a href="mailto:zachw38@gmail.com">Zach</a>
+            </p>
+            <!-- <hr> -->
+            <p>gitCommit Team</p>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $('.sandwichbar').click(function() {
+            $('.navigation').addClass('on');
+        });
+        $('span.x').click(function() {
+            $('.navigation').removeClass('on');
+        });
+
+        $(window).scroll(function () {
+            var scrollTop = $(window).scrollTop();
+            var minScrolled = $('#gitcommitme').offset();
+            if (scrollTop > minScrolled.top) {
+                $('.hiddenheader').addClass('on');
+            }
+            else {
+                $('.hiddenheader').removeClass('on');
+            }
+
+            var scrollBottom = $(window).scrollTop() + $(window).height();
+            var scroll1 = $('#scroll1').offset();
+            var scroll2 = $("#scroll2").offset();
+            var scroll3 = $('#scroll3').offset();
+            if (scrollBottom > scroll1.top) {
+                $('#row1').addClass('normal');
+            }
+            if (scrollBottom > scroll2.top) {
+                $('#row2').addClass('normal');
+            }
+            if (scrollBottom > scroll3.top) {
+                $('#row3').addClass('normal');
+            }
+        });
+    </script>
+</body>
+</html>
