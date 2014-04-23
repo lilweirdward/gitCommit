@@ -1,0 +1,20 @@
+<template name="backendInterface">
+	<div class="section">
+		<div class="container">
+			{{#each users}}
+				<h1>Zach Woodward</h1>
+				<div class="wrapper left">
+				</div>
+				<div class="wrapper">
+					<img src="{{profile.avatar_url}}" class="profilepic" />
+				</div>
+				<div class="wrapper right">
+				</div>
+				<div id="activity" class="portion">
+					<h2>Activity</h2>
+					<img class="expand" src="assets/images/down-chevron.png" />
+				</div>
+			{{/each}}
+		</div>
+	</div>
+</template>
