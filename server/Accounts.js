@@ -1,6 +1,13 @@
-var currentUserCount = Meteor.users.find().count();
-
 Accounts.onCreateUser(function(options, user){
+	
+	if (Meteor.users.find().count() === 0) {
+	
+		var currentUserCount = 1;
+	}
+	else {
+		currentUserCount = Meteor.users.find().count()+1;
+	}
+	
 	var accessToken = user.services.github.accessToken,
 		result,
 		profile;
