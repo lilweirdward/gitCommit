@@ -8,39 +8,6 @@
 </head>
 <body>
 	
-	{{> renderPage}}
 
-    <script type="text/javascript">
-        $('.sandwichbar').click(function() {
-            $('.navigation').addClass('on');
-        });
-        $('span.x').click(function() {
-            $('.navigation').removeClass('on');
-        });
-
-        $(window).scroll(function () {
-            var scrollTop = $(window).scrollTop();
-            var minScrolled = $('#gitcommitme').offset();
-            if (scrollTop > minScrolled.top) {
-                $('.hiddenheader').addClass('on');
-            }
-            else {
-                $('.hiddenheader').removeClass('on');
-            }
-
-            var scrollBottom = $(window).scrollTop() + $(window).height();
-            var scroll1 = $('#scroll1').offset();
-            var scroll2 = $("#scroll2").offset();
-            var scroll3 = $('#scroll3').offset();
-            if (scrollBottom > scroll1.top) {
-                $('#row1').addClass('normal');
-            }
-            if (scrollBottom > scroll2.top) {
-                $('#row2').addClass('normal');
-            }
-            if (scrollBottom > scroll3.top) {
-                $('#row3').addClass('normal');
-            }
-        });
-    </script>
+    
 </body>
