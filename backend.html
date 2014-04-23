@@ -22,8 +22,54 @@
 			</div>
 			<div id="activity" class="portion">
 				<h2>Activity</h2>
-				<img class="expand" src="assets/images/down-chevron.png" />
+			</div>
+			<div id="activity" class="portion">
+				<h2>Badges</h2>
 			</div>
 		</div>
 	</div>
+	<div class="chat">
+		<div class="tab"></div>
+		<div class="messages">
+			<div class="message">
+				<img src="assets/images/me-myself-and-i.jpg" />
+				<h2>Zach Woodward</h2>
+				<p>What's up everyone??</p>
+			</div>
+			<div class="message">
+				<img src="assets/images/me-myself-and-i.jpg" />
+				<h2>Zach Woodward</h2>
+				<p>Hopefully this is an example of multi-line text that flows past the profile picture.</p>
+			</div>
+			<div class="message">
+				<img src="assets/images/me-myself-and-i.jpg" />
+				<h2>Zach Woodward</h2>
+				<p>This is fun cause I can say whatever I want.</p>
+			</div>
+			<div class="message">
+				<img src="assets/images/me-myself-and-i.jpg" />
+				<h2>Zach Woodward</h2>
+				<p>If I wanted to insert a new message, I would have to prepend it to this div.</p>
+			</div>
+			<div class="message">
+				<img src="assets/images/me-myself-and-i.jpg" />
+				<h2>Zach Woodward</h2>
+				<p>Trying to test scrolling. Don't mind me.</p>
+			</div>
+			<div class="message">
+				<img src="assets/images/me-myself-and-i.jpg" />
+				<h2>Zach Woodward</h2>
+				<p>Damnit, how many messages can this thing take before it needs to scroll?!</p>
+			</div>
+		</div>
+		<div class="messagebox">
+			<textarea></textarea>
+			<a href="#" class="button">Send</a>
+		</div>
+	</div>
+	<script type="text/javascript">
+		$('.tab').click(function() {
+			$('.chat').toggleClass('open');
+		});
+	</script>
 </body>

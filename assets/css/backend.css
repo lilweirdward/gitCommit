@@ -1,10 +1,10 @@
-/* line 9, ../compass/sass/backend.scss */
+/* line 18, ../compass/sass/backend.scss */
 html, body {
   width: 100%;
   height: 100%;
 }
 
-/* line 14, ../compass/sass/backend.scss */
+/* line 23, ../compass/sass/backend.scss */
 body {
   font-family: "Source Sans Pro", sans-serif;
   text-rendering: optimizeLegibility;
@@ -14,7 +14,7 @@ body {
   padding: 0;
 }
 
-/* line 23, ../compass/sass/backend.scss */
+/* line 32, ../compass/sass/backend.scss */
 h1 {
   font-size: 4rem;
   font-family: "Quicksand", sans-serif;
@@ -22,38 +22,38 @@ h1 {
   margin-top: 0;
 }
 
-/* line 30, ../compass/sass/backend.scss */
+/* line 39, ../compass/sass/backend.scss */
 a.logo {
   position: absolute;
   top: 2rem;
   left: 5rem;
 }
-/* line 34, ../compass/sass/backend.scss */
+/* line 43, ../compass/sass/backend.scss */
 a.logo img {
   height: 6rem;
 }
 
-/* line 39, ../compass/sass/backend.scss */
+/* line 48, ../compass/sass/backend.scss */
 .section {
   padding: 2.5rem 0;
   margin: 0;
   clear: both;
 }
 
-/* line 45, ../compass/sass/backend.scss */
+/* line 54, ../compass/sass/backend.scss */
 .section.header {
   padding: 1rem 0;
 }
-/* line 47, ../compass/sass/backend.scss */
+/* line 56, ../compass/sass/backend.scss */
 .section.header .container {
   text-align: left;
 }
-/* line 50, ../compass/sass/backend.scss */
+/* line 59, ../compass/sass/backend.scss */
 .section.header img.logo {
   height: 6rem;
 }
 
-/* line 55, ../compass/sass/backend.scss */
+/* line 64, ../compass/sass/backend.scss */
 .container {
   max-width: 70rem;
   margin: 0 auto;
@@ -61,21 +61,21 @@ a.logo img {
   text-align: center;
   overflow: hidden;
 }
-/* line 61, ../compass/sass/backend.scss */
+/* line 70, ../compass/sass/backend.scss */
 .container p {
   text-align: justify;
   font-size: 1.35rem;
   font-weight: 300;
 }
 
-/* line 68, ../compass/sass/backend.scss */
+/* line 77, ../compass/sass/backend.scss */
 .clear {
   margin: 0;
   padding: 0;
   clear: both;
 }
 
-/* line 74, ../compass/sass/backend.scss */
+/* line 83, ../compass/sass/backend.scss */
 .wrapper {
   display: inline-block;
   border-radius: 50%;
@@ -86,14 +86,14 @@ a.logo img {
   z-index: 3;
   position: relative;
 }
-/* line 83, ../compass/sass/backend.scss */
+/* line 92, ../compass/sass/backend.scss */
 .wrapper .profilepic {
   width: 100%;
   height: 100%;
   display: block;
 }
 
-/* line 90, ../compass/sass/backend.scss */
+/* line 99, ../compass/sass/backend.scss */
 .arrow, .wrapper.left, .wrapper.right {
   width: 15rem;
   height: 15rem;
@@ -105,21 +105,156 @@ a.logo img {
   cursor: pointer;
 }
 
-/* line 101, ../compass/sass/backend.scss */
+/* line 110, ../compass/sass/backend.scss */
 .wrapper.left {
   background-image: url("../images/arrow-left.png");
   margin-right: -2rem;
   z-index: 1;
 }
 
-/* line 108, ../compass/sass/backend.scss */
+/* line 117, ../compass/sass/backend.scss */
 .wrapper.right {
   background-image: url("../images/arrow-right.png");
   margin-left: -2rem;
   z-index: 2;
 }
 
-/* line 119, ../compass/sass/backend.scss */
+/* line 124, ../compass/sass/backend.scss */
+.portion {
+  padding: 1rem;
+  width: 80%;
+  margin: 2rem auto;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  background-color: #141414;
+  background-image: url("../images/down-chevron.png");
+  background-size: 2rem;
+  background-position: 90% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+}
+/* line 136, ../compass/sass/backend.scss */
+.portion h2 {
+  color: white;
+  font-style: "Quicksand", sans-serif;
+  font-size: 3rem;
+  font-weight: 300;
+  letter-spacing: 0.25rem;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
+
+/* line 148, ../compass/sass/backend.scss */
+.chat {
+  width: 22rem;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: auto;
+  background-color: #141414;
+  border-left: 1px solid white;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  transition: all 0.5s;
+  z-index: 10;
+}
+
+/* line 161, ../compass/sass/backend.scss */
+.chat.open {
+  left: 100%;
+}
+
+/* line 165, ../compass/sass/backend.scss */
+.tab {
+  height: 3rem;
+  width: 3rem;
+  background-color: #141414;
+  background-image: url("../images/sandwich-bar.png");
+  background-size: 50%;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  cursor: pointer;
+  position: absolute;
+  top: 5rem;
+  right: 100%;
+  border: 1px solid white;
+  border-right: none;
+}
+
+/* line 181, ../compass/sass/backend.scss */
+.messages {
+  /*border: 1px solid white;*/
+  color: white;
+  margin: 5px;
+  padding: 5px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 15rem;
+  overflow-y: auto;
+}
+
+/* line 194, ../compass/sass/backend.scss */
+.message {
+  border-top: 1px solid white;
+  padding: 1rem;
+  margin: 0.5rem;
+  clear: both;
+}
+/* line 199, ../compass/sass/backend.scss */
+.message img {
+  width: 3rem;
+  height: 3rem;
+  display: inline-block;
+  vertical-align: top;
+  float: left;
+  margin: 0.5rem;
+  margin-left: 0;
+}
+/* line 208, ../compass/sass/backend.scss */
+.message h2 {
+  display: block;
+  font-size: 1.15rem;
+  margin: 0.25rem;
+}
+/* line 213, ../compass/sass/backend.scss */
+.message p {
+  display: inline;
+  margin: 0.25rem;
+}
+
+/* line 219, ../compass/sass/backend.scss */
+.messagebox {
+  border: 1px solid white;
+  background-color: #c7c7c7;
+  margin: 5px;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  top: auto;
+  text-align: right;
+  color: black;
+}
+/* line 231, ../compass/sass/backend.scss */
+.messagebox .button {
+  margin: 0.75rem;
+  margin-bottom: 0;
+}
+/* line 235, ../compass/sass/backend.scss */
+.messagebox textarea {
+  height: 10rem;
+  display: block;
+  width: 90%;
+  margin: 0 auto;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+/* line 244, ../compass/sass/backend.scss */
 .button {
   display: inline-block;
   padding: 0.75rem 1.875rem;
@@ -135,8 +270,12 @@ a.logo img {
   transition: all 0.5s;
 }
 
-/* line 132, ../compass/sass/backend.scss */
+/* line 257, ../compass/sass/backend.scss */
 .button:hover {
-  box-shadow: inset, 0, 0, 0, 3px, #f04285;
+  -webkit-box-shadow: inset 0 0 0 3px #f04285;
+  -moz-box-shadow: inset 0 0 0 3px #f04285;
+  -ms-box-shadow: inset 0 0 0 3px #f04285;
+  -o-box-shadow: inset 0 0 0 3px #f04285;
+  box-shadow: inset 0 0 0 3px #f04285;
   background-color: transparent;
 }

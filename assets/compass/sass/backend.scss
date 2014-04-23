@@ -6,6 +6,15 @@ $header-font-stack: 'Quicksand', sans-serif;
 $pink: #F04285;
 $charcoal: #141414;
 
+@mixin box-shadow($type, $firstvar, $secondvar, $thirdvar, $width, $color)
+{
+	-webkit-box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+	-moz-box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+	-ms-box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+	-o-box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+	box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+}
+
 html, body {
 	width: 100%;
 	height: 100%;
@@ -112,8 +121,124 @@ a.logo {
 	z-index: 2;
 }
 
-.activity {
-	
+.portion {
+	padding: 1rem;
+	width: 80%;
+	margin: 2rem auto;
+	border-top-left-radius: 0.5rem;
+	border-top-right-radius: 0.5rem;
+	background-color: $charcoal;
+	background-image: url('../images/down-chevron.png');
+	background-size: 2rem;
+	background-position: 90% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	h2 {
+		color: white;
+		font-style: $header-font-stack;
+		font-size: 3rem;
+		font-weight: 300;
+		letter-spacing: 0.25rem;
+		margin: 0;
+		padding: 0;
+		text-transform: uppercase;
+	}
+}
+
+.chat {
+	width: 22rem;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: auto;
+	background-color: $charcoal;
+	border-left: 1px solid white;
+	@include transition(all 0.5s);
+	z-index: 10;
+}
+
+.chat.open {
+	left: 100%;
+}
+
+.tab {
+	height: 3rem;
+	width: 3rem;
+	background-color: $charcoal;
+	background-image: url('../images/sandwich-bar.png');
+	background-size: 50%;
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	position: absolute;
+	top: 5rem;
+	right: 100%;
+	border: 1px solid white;
+	border-right: none;
+}
+
+.messages {
+	/*border: 1px solid white;*/
+	color: white;
+	margin: 5px;
+	padding: 5px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 15rem;
+	overflow-y: auto;
+}
+
+.message {
+	border-top: 1px solid white;
+	padding: 1rem;
+	margin: 0.5rem;
+	clear: both;
+	img {
+		width: 3rem;
+		height: 3rem;
+		display: inline-block;
+		vertical-align: top;
+		float: left;
+		margin: 0.5rem;
+		margin-left: 0;
+	}
+	h2 {
+		display: block;
+		font-size: 1.15rem;
+		margin: 0.25rem;
+	}
+	p {
+		display: inline;
+		margin: 0.25rem;
+	}
+}
+
+.messagebox {
+	border: 1px solid white;
+	background-color: lighten($charcoal, 70%);
+	margin: 5px;
+	padding: 5px;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	top: auto;
+	text-align: right;
+	color: black;
+	.button {
+		margin: 0.75rem;
+		margin-bottom: 0;
+	}
+	textarea {
+		height: 10rem;
+		display: block;
+		width: 90%;
+		margin: 0 auto;
+		font-family: $main-font-stack;
+	}
 }
 
 .button {
