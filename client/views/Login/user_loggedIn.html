@@ -1,0 +1,9 @@
+<template name="user_loggedIn">
+	{{#if loggingIn}}
+		<a>Logging in..</a>
+	{{else}}
+				<a>{{currentUser.profile.name}}</a>
+				<a id="logout">Logout</a> 
+
+		{{/if}}
+</template>

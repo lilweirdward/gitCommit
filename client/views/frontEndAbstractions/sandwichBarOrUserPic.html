@@ -1,0 +1,8 @@
+<template name="sandwichBarOrUserPic">
+	{{#if currentUser}}
+		<img class="sandwichbar" src="{{currentUser.profile.avatar_url}}" />
+	{{else}}
+		<img class="sandwichbar" src="images/sandwich-bar.png" />
+	{{/if}}
+		
+</template>

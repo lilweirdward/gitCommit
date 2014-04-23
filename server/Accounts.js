@@ -1,3 +1,5 @@
+var currentUserCount = Meteor.users.find().count();
+
 Accounts.onCreateUser(function(options, user){
 	var accessToken = user.services.github.accessToken,
 		result,
@@ -31,6 +33,8 @@ Accounts.onCreateUser(function(options, user){
 			"public_repos", //count
 			"followers", //count
 			"following"); //count
+			
+			profile.uID = currentUserCount; //Manually add a specified unique sequential ID
 			
 
 			
