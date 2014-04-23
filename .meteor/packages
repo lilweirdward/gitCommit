@@ -9,3 +9,4 @@ accounts-github
 service-configuration
 jquery
 accounts-ui
+iron-router
