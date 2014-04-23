@@ -1,0 +1,386 @@
+@import 'compass/css3';
+@import '../../bourbon/bourbon';
+
+$main-font-stack: 'Source Sans Pro', sans-serif;
+$header-font-stack: 'Quicksand', sans-serif;
+$pink: #F04285;
+$charcoal: #141414;
+
+@mixin box-shadow($type, $firstvar, $secondvar, $thirdvar, $width, $color)
+{
+	-webkit-box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+	-moz-box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+	-ms-box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+	-o-box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+	box-shadow: $type $firstvar $secondvar $thirdvar $width $color;
+}
+
+html, body {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	font-family: $main-font-stack;
+    text-rendering: optimizeLegibility;
+    font-size: 100%;
+	letter-spacing: 1.25px;
+	margin: 0;
+	padding: 0;
+}
+
+h1 {
+	font-size: 4rem;
+	font-family: $header-font-stack;
+	font-weight: 300;
+}
+
+.section {
+	padding: 5rem 0;
+	margin: 0;
+	clear: both;
+}
+
+.section.header {
+	padding: 0;
+	background-image: url(../images/hero-home.png);
+	background-size: 100% 100%;
+	height: 100%;
+	color: white;
+	h1 {
+		font-size: 6rem;
+	}
+	h2 {
+		font-size: 4rem;
+		font-family: $header-font-stack;
+		font-weight: 400;	
+	}
+	img.logo {
+		height: 8rem;
+	}
+}
+
+.hiddenheader {
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: auto;
+	background-image: none;
+	background-color: $charcoal;
+	padding: 2rem;
+	z-index: -1;
+	box-shadow: rgba(0,0,0,0.85) 0 0 2rem;
+	@include transition(all 1s);
+	.container {
+		text-align: left;
+	}
+	a {
+		display: inline-block;
+		width: 90%;
+	}
+	img.sandwichbar {
+		margin-bottom: 1rem;
+	}
+	img.logo {
+		height: 4rem;
+	}
+}
+
+.hiddenheader.on {
+	z-index: 4;
+	opacity: 1;
+}
+
+.section.testimony {
+	background-color: $pink;
+	.column {
+		padding: 5rem;
+	}
+}
+
+.section.signup {
+	background-color: $charcoal;
+	color: white;
+}
+
+.section.contact {
+	background-color: lighten($charcoal, 20%);
+	color: white;
+}
+
+.section.footer {
+	padding: 1.5rem;
+	background-color: $charcoal;
+	color: white;
+	p {
+		text-align: center;
+		font-size: 1rem;
+		margin: 0.25rem;
+	}
+	a {
+		text-decoration: none;
+		color: inherit;
+	}
+	hr {
+		border-color: black;
+		width: 50%;
+	}
+}
+	
+.container {
+	max-width: 70rem;
+	margin: 0 auto;
+	padding: 0;
+	text-align: center;
+	overflow: hidden;
+	p {
+		text-align: justify;
+		font-size: 1.35rem;
+		font-weight: 300;
+	}
+}
+
+.container.header.special {
+	text-align: left;
+	padding: 2rem 0;
+}
+
+img.container.left {
+	max-width: none;
+	float: left;
+	width: 50%;
+}
+
+div.container.left {
+	max-width: none;
+	padding: 5rem;
+	float: right;
+	width: 35%;
+}
+
+img.container.right {
+	max-width: none;
+	float: right;
+	width: 50%;
+}
+
+div.container.right {
+	max-width: none;
+	padding: 5rem;
+	float: left;
+	width: 35%;
+}
+
+.clear {
+	margin: 0;
+	padding: 0;
+	clear: both;
+}
+
+.row {
+    overflow: auto;
+    display: table;
+}
+
+.row.special {
+	@include transform(translateX(80%));
+	opacity: 0.5;
+	@include transition(all 3s);
+}
+
+.row.special-left {
+	@include transform(translateX(-80%));
+	opacity: 0.5;
+	@include transition(all 3s);
+}
+
+.row.special.normal {
+	@include transform(translateX(0));
+	opacity: 1;
+}
+
+.row.special-left.normal {
+	@include transform(translateX(0));
+	opacity: 1;
+}
+
+.column {
+	display: table-cell;
+	vertical-align: middle;
+    position: relative;
+    width: 100%;
+    min-height: 0.0625rem;
+    padding: 1rem;
+    text-align: center;
+    .circle {
+    	border-radius: 50%;
+    	overflow: hidden;
+		width: 15rem;
+		height: 15rem;
+    }
+    .fill {
+    	width: 100%;
+    	height: 100%;
+    	display: block;
+	}
+}
+
+.size-12 {
+    max-width: 95%;
+}
+
+.size-9 {
+	width: 53.571428571428571428571428571429%;
+}
+
+.size-8 {
+	width: 60.95238095238095238095238095238%;
+}
+
+.size-7 {
+	width: 55%;
+}
+
+.size-6 {
+    width: 47.142857142857142857142857142857%;
+}
+
+.size-5 {
+	width: 39.285714285714285714285714285714%;
+}
+
+.size-4 {
+    width: 30.47619047619047619047619047619%;
+}
+
+.size-3 {
+	width: 17.857142857142857142857142857143%;
+}
+
+.float-left {
+	float: left;
+}
+
+.float-right {
+	float: right;
+}
+
+.navigation {
+	z-index: -1;
+	opacity: 0;
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	text-align: center;
+	background-color: rgba($pink, .9);
+	@include transition(all 1s);
+	.wrapper {
+		position: absolute;
+		height: 50%;
+		width: 50%;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		margin: auto;
+		a {
+			text-decoration: none;
+			color: black;
+			display: block;
+			font-size: 3rem;
+			margin: 2rem;
+			@include transition(all 0.75s);
+		}
+		a:hover {
+			color: white;
+		}
+		span.x {
+			display: block;
+			position: fixed;
+			top: 5rem;
+			right: 15%;
+			font-size: 2rem;
+			font-weight: 900;
+			cursor: pointer;
+		}
+	}
+}
+
+.navigation.on {
+	opacity: 1;
+	z-index: 5;
+}
+
+.button {
+	display: inline-block;
+	padding: 0.75rem 1.875rem;
+	border-radius: 0.25rem;
+	background-color: $pink;
+	text-transform: uppercase;
+	color: white;
+	text-align: center;
+	text-decoration: none;
+	cursor: pointer;
+	@include transition(all 0.5s);
+}
+
+.button:hover {
+	@include box-shadow(inset, 0, 0, 0, 3px, $pink);
+	background-color: transparent;
+}
+
+.clickable {
+	cursor: pointer;
+}
+
+img.sandwichbar {
+	@extend .clickable;
+	height: 1.5rem;
+	margin-bottom: 3rem;
+}
+
+img.downchevron {
+	@extend .clickable;
+	position: absolute;
+	bottom: 2rem;
+	left: 50%;
+	height: 1.5rem;
+}
+
+.snazzyinput {
+	height: 3rem;
+	font-size: 1.5rem;
+	padding: 0.75rem;
+	font-family: $main-font-stack;
+	width: 40%;
+	margin: 2rem;
+	border: none;
+	border-bottom: 1px solid black;
+	outline: none;
+	background-color: transparent;
+}
+
+input#name {
+	@extend .snazzyinput;
+}
+
+input#email {
+	@extend .snazzyinput;
+}
+
+input#message {
+	@extend .snazzyinput;
+	width: 90%;
+}
+
+button#submit {
+	@extend .button;
+	font-family: $main-font-stack;
+	font-size: 1rem;
+	letter-spacing: normal;
+	border: none;
+}
